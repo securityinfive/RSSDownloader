@@ -1,5 +1,5 @@
 """
-Author : Security In Five
+Author : Security In Five - https://securityinfive.com
 Contact: bblogger@protonmail.com
 Source: https://github.com/securityinfive/RSSDownloader
 
