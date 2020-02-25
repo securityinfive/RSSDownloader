@@ -1,9 +1,7 @@
 """
-Author : Drew Koenig - Security In Five
+Author : Security In Five
 Contact: bblogger@protonmail.com
 Source: https://github.com/securityinfive/RSSDownloader
-
-License: MIT (get notes)
 
 Python script to download MP3 files from a podcast's RSS feed.
 Usage:
@@ -18,7 +16,6 @@ it into a tool for me to archive the 700+ episodes of my podcast from my host. I
 to be dynamic enough to work with any 'standard' RSS feed. Currently the RSS_Target and local_target_dir are hard coded.
 
 Future ideas to change this to where it could be scheduled for regular local downloads outside podcast player services.
-
 """
 import wget
 import feedparser
@@ -30,7 +27,7 @@ import os
 # local_target_dir = <local directory 'C:\foldername\target' format> "C:\Dev\PodcastArchive"
 
 RSS_Target = "https://securityinfive.libsyn.com/rss"
-local_target_dir = "C:\Dev\PodcastArchive"
+local_target_dir = "G:\SecurityInFive Archive"
 
 def get_input(rss_len):
     how_many_downloaded = ""
@@ -86,7 +83,6 @@ def Download_Files(target_dir, rss_feed, how_many_to_get):
     # Initialize the download counter
     episode_count = 1
     # Get all the mp3 files in the target directory to skip over existing files and put in a list.
-    
     # Get all the mp3 files in the target directory and load it into a list
     os.chdir(target_dir)
     current_files = []
@@ -143,12 +139,12 @@ def Download_Files(target_dir, rss_feed, how_many_to_get):
         print("--- DOWNLOAD COMPLETE ---")
 # -----------------------------------------------------------------------
 
-# Get Started
+# Get Started, Load the RSS and break out the feed and file count from the feed
 RSS_Feed = Get_Feed(RSS_Target)
 RSS_Feed_Items = RSS_Feed[0]
 RSS_Feed_Count = RSS_Feed[1]
 
-# Make sure user input is clean
+# User input for number of files to download and make sure user input is clean
 is_valid = 0
 while is_valid == 0:
     How_Many = get_input(RSS_Feed_Count)
