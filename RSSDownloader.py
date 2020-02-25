@@ -1,7 +1,7 @@
 """
 Author : Drew Koenig - Security In Five
 Contact: bblogger@protonmail.com
-Source: https://wwww.github.com/securityinfive/RSSDownloader
+Source: https://github.com/securityinfive/RSSDownloader
 
 License: MIT (get notes)
 
