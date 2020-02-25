@@ -8,8 +8,8 @@ In the Python file you will need to provive the following two items
    - local_target_dir = "local directory to download to"
   
   Example:
-    RSS_Target = "https://securityinfive.libsyn.com/securityinfive/rss
-    local_target_dir = "C:\Dev\PodcastDownloads\SecurityInFive"
+    - RSS_Target = "https://securityinfive.libsyn.com/securityinfive/rss
+    - local_target_dir = "C:\Dev\PodcastDownloads\SecurityInFive"
     
 When you run the script you will be asked how many to download, enter a number or 0 for all of the avialable episodes.
 The script will skip episodes that already exist in the target directory.
