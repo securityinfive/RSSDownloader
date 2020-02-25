@@ -135,7 +135,7 @@ def Download_Files(target_dir, rss_feed, how_many_to_get):
     # --- END FOR ---
 
     # Kick out Complete message when done with all episodes when input is 0
-    if str(how_many_to_get) == 0:
+    if int(how_many_to_get) == 0:
         print("--- DOWNLOAD COMPLETE ---")
 # -----------------------------------------------------------------------
 
