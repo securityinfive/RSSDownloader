@@ -26,8 +26,8 @@ import os
 # RSS_Target = <https link to the RSS feed> "https://securityinfive.libsyn.com/rss"
 # local_target_dir = <local directory 'C:\foldername\target' format> "C:\Dev\PodcastArchive"
 
-RSS_Target = "https://securityinfive.libsyn.com/rss"
-local_target_dir = "G:\SecurityInFive Archive"
+RSS_Target = ""
+local_target_dir = ""
 
 def get_input(rss_len):
     how_many_downloaded = ""
@@ -150,7 +150,13 @@ while is_valid == 0:
     How_Many = get_input(RSS_Feed_Count)
     is_valid = validate_input(How_Many, RSS_Feed_Count)
 else:
-    print("Downloading " + str(How_Many) + " file(s) to - " + local_target_dir)
+    if int(How_Many) == 0:
+        File_Count = "All files to - "
+    elif int(How_Many) == 1:
+        File_Count = str(How_Many) + " file to - "
+    else:
+        File_Count = str(How_Many) + " files to - "
+    print("Downloading " + File_Count + local_target_dir)
     Download_Files(local_target_dir, RSS_Feed_Items, How_Many)
 
 # End Of Line
