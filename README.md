@@ -10,13 +10,15 @@ This will take an RSS feed of a podcast, to download locally and then download t
 
 A Maximum Limit, Max_Items, can be provided, otherwise all files are downloaded.
 
-A download location, Local_Folder, can be provided if not provided stored in the current director
+A download location, Local_Folder, can be provided, if not provided stored in the current directory.
 
-If --Title, or -T, is provides, then the file is downloaded with the name of the episode
+If --Title, or -T, is provides, then the file is downloaded with the name of the episode.
 
 The script will skip episodes that already exist in the target directory.
 
 That's it.
+
+python3 is required
 
 
 ## Known Issues:
