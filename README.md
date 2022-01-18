@@ -1,17 +1,27 @@
 # RSSDownloader
 Download all the current MP3s from your favorite podcast RSS feed.
 
-This little app started off as an exercise as I teach myself Python and grew into this. This will take an RSS feed of a podcast, ask you how many of the latest episodes you want to download locally and then download the mp3s. 
 
-In the Python file you will need to provive the following two items
-   - RSS_Target = "http of the RSS Feed"
-   - local_target_dir = "local directory to download to"
-  
-  Example:
-    - RSS_Target = "https://securityinfive.libsyn.com/securityinfive/rss
-    - local_target_dir = "C:\Dev\PodcastDownloads\SecurityInFive"
-    
-When you run the script you will be asked how many to download, enter a number or 0 for all of the avialable episodes.
+Usage:
+
+>    python3 RSSDownloader.py RSS_Feed [Max_Items] [Local_Folder] [--Title]
+
+This will take an RSS feed of a podcast, to download locally and then download the mp3s.
+
+A Maximum Limit, Max_Items, can be provided, otherwise all files are downloaded.
+
+A download location, Local_Folder, can be provided, if not provided stored in the current directory.
+
+If --Title, or -T, is provides, then the file is downloaded with the name of the episode.
+
 The script will skip episodes that already exist in the target directory.
 
 That's it.
+
+python3 is required
+
+
+## Known Issues:
+
+*  Only downloads mp3 files
+*  If the download it interrupted then a partial file remains, which is a limitation of wget.py
