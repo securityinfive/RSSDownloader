@@ -89,7 +89,7 @@ def Download_Files(target_dir, rss_feed, how_many_to_get,rename_to_title):
 
             if rename_to_title:
                 if "title" in episode:
-                    wget.download(mp3_link['href'], target_dir+"/"+re.sub(r'[<>:/\|?*"]+',"",episode["title"]+".mp3"))
+                    wget.download(mp3_link['href'], temp_mp3_link)
                 else:
                     wget.download(mp3_link['href'], target_dir)
             else:
